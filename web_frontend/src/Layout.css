@@ -1,0 +1,11 @@
+.row{
+    margin-bottom: 100px;
+}
+.row .col-md-2{
+    margin-top: 50px;
+
+    text-align: left;
+    font-weight: bold;
+    font-family: monospace;
+    float: left;
+}

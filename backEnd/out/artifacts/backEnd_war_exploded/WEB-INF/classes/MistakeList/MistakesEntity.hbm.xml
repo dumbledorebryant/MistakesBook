@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="MistakeList.MistakesEntity" table="mistakes" schema="userinfo">
+        <id name="mistakeId">
+            <column name="mistakeID" sql-type="int(11)"/>
+        </id>
+        <property name="mistakeTime">
+            <column name="mistakeTime" sql-type="datetime" not-null="true"/>
+        </property>
+        <property name="mistakeTitle">
+            <column name="mistakeTitle" sql-type="varchar(32)" length="32" not-null="true"/>
+        </property>
+        <property name="mistakeContent">
+            <column name="mistakeContent" sql-type="varchar(256)" length="256" not-null="true"/>
+        </property>
+        <property name="userId">
+            <column name="userID" sql-type="varchar(20)" length="20" not-null="true"/>
+        </property>
+        <property name="mistakeCause">
+            <column name="mistakeCause" sql-type="varchar(256)" length="256" not-null="true"/>
+        </property>
+        <property name="mistakeTag">
+            <column name="mistakeTag" sql-type="varchar(32)" length="32" not-null="true"/>
+        </property>
+    </class>
+</hibernate-mapping>

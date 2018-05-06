@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+         version="4.0">
+
+    <!-- cors解决跨域访问问题 -->
+    <filter>
+        <filter-name>cors</filter-name>
+        <filter-class>filter.Filter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>cors</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+
+    <servlet>
+        <servlet-name>Login</servlet-name>
+        <servlet-class>UserManager.Login</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Login</servlet-name>
+        <url-pattern>/UserManager/Login</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>Register</servlet-name>
+        <servlet-class>UserManager.Register</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Register</servlet-name>
+        <url-pattern>/UserManager/Register</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>Fetch</servlet-name>
+        <servlet-class>Data.Fetch</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Fetch</servlet-name>
+        <url-pattern>/Data/Fetch</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>Send</servlet-name>
+        <servlet-class>Data.Send</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Send</servlet-name>
+        <url-pattern>/Data/Send</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>FetchPublic</servlet-name>
+        <servlet-class>Data.FetchPublic</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>FetchPublic</servlet-name>
+        <url-pattern>/Data/FetchPublic</url-pattern>
+    </servlet-mapping>
+
+</web-app>
